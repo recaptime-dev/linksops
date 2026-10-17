@@ -1,9 +1,9 @@
+"$schema" = "https://recaptimedev-labs.github.io/workers-config-schema/config-schema.json"
 name = "linksops"
 account_id = "33e6189a4a87f1923e71af8da171e2ed"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
-
 
 # D1 Database
 # Note: database_id does NOT support environment variable substitution
@@ -53,10 +53,6 @@ FAILED_AUTH_WINDOW = "7200"    # Time window in seconds (60 = 1 minute for dev/t
 #   CLOUDFLARE_ACCOUNT_ID - Your Cloudflare account ID
 #   CLOUDFLARE_API_TOKEN - API token with "Account Analytics Read" permission
 
-
-
-
-
 # Cron triggers for scheduled tasks
 # Daily tasks (midnight UTC): analytics aggregation and top 100 status check
 # Status check every 6 hours: regular link status monitoring
@@ -80,3 +76,6 @@ head_sampling_rate = 1
 [placement]
 mode = "smart"
 
+[[routes]]
+pattern = "https://go.recaptime.dev/*"
+zone_id = "6534d0ae563fa73029317252f9c26e08"
