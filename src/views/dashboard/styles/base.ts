@@ -125,7 +125,9 @@ body {
   padding: 1rem; 
   transition: width 0.3s ease, transform 0.3s ease; 
   position: relative; 
-  overflow: hidden; 
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .sidebar.collapsed { width: 0; padding: 0; overflow: hidden; transform: translateX(-100%); }
 .sidebar-toggle { 

@@ -7,6 +7,7 @@
 
 import { describe, it, expect } from 'vitest';
 import { dashboardHtml } from '../dashboard';
+import { baseCss } from '../dashboard/styles/base';
 import { componentsCss } from '../dashboard/styles/components';
 
 // dashboard.ts is one template literal: checking the RENDERED page catches escapes the
@@ -62,6 +63,11 @@ describe('dashboard pixel tracking UI (rendered)', () => {
     expect(componentsCss).toMatch(/[.]btn-danger:hover [{]/);
     // .form-group label is display:block; the checkbox-label row must stay flex inside forms.
     expect(componentsCss).toContain('.form-group label.checkbox-label { display: flex; }');
+  });
+
+  it('allows the desktop sidebar to scroll while preserving collapsed behavior', () => {
+    expect(baseCss).toMatch(/[.]sidebar [{][^}]*overflow-y: auto/);
+    expect(baseCss).toContain('.sidebar.collapsed { width: 0; padding: 0; overflow: hidden;');
   });
 
   it('domain selector change handler is assigned once, not stacked on every refresh', () => {
