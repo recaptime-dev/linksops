@@ -16,10 +16,12 @@ dist/
 .prettiercache
 
 # Environment variables (contains actual sensitive values)
-.env
+!.env*
+.env.keys
 .env.local
 .env.*.local
 .dev.vars
+*.decrypted
 
 # IDE
 .vscode/

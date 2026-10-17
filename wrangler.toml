@@ -1,4 +1,5 @@
-name = "openshortlink"
+name = "linksops"
+account_id = "33e6189a4a87f1923e71af8da171e2ed"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
@@ -11,7 +12,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "openshortlink-db"
-database_id = ""  # Replace with your actual database ID
+database_id = "30e30298-467a-437d-94bc-dd6e411bd830"  # Replace with your actual database ID
 
 
 # KV Namespace
@@ -19,9 +20,8 @@ database_id = ""  # Replace with your actual database ID
 # You must hardcode your actual KV namespace IDs here (get them from: wrangler kv:namespace list)
 [[kv_namespaces]]
 binding = "CACHE"
-id = ""  # Replace with your actual KV namespace ID
-preview_id = ""  # Replace with your actual KV preview ID
-
+id = "aa27c185181c406fb6f1aac86f97d426"  # Replace with your actual KV namespace ID
+preview_id = "a36d3e88befe4a7dbed78f7e56867feb"  # Replace with your actual KV preview ID
 
 # Analytics Engine
 [[analytics_engine_datasets]]
