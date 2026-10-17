@@ -34,6 +34,7 @@
   "license": "AGPL-3.0-only",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260611.1",
+    "@dotenvx/dotenvx": "^2.38.0",
     "@types/node": "^20.14.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
@@ -61,5 +62,10 @@
         "description": "API token with **Account Analytics Read** permission. [Create one here](https://dash.cloudflare.com/profile/api-tokens)."
       }
     }
+  },
+  "allowScripts": {
+    "workerd@1.20260611.1": true,
+    "sharp@0.34.5": true,
+    "esbuild@0.28.2": true
   }
 }
